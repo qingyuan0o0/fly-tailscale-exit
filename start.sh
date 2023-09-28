@@ -15,7 +15,7 @@ ip6tables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 /app/tailscaled \
     --verbose=1 \
-    --port 41641 \
+    --port 443 \
     --state=mem: & # emphemeral-node mode (auto-remove)
     --tun=userspace-networking
     --socks5-server=localhost:1055
